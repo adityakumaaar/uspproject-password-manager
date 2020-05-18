@@ -39,7 +39,7 @@ int main(int argc, char** argv){
 
         linebreak
         std::cout<<"This is the command to read the password"<<endl;
-        std::cout<<"To see all passwords stored enter all when prompted for Enter the wesite\n";
+        std::cout<<"To see all passwords stored enter all when prompted for Enter the website\n";
         linebreak
 
         if(argc == 2){

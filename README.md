@@ -1,5 +1,9 @@
 # USP PROJECT - PASSWORD MANAGER
 
+### Dependencies
+* ccrypt
+* pwgen
+
 ## USAGE
 Compile the password-manager.cpp by 
 ```
@@ -20,7 +24,7 @@ The program executes as :
 ## CREATING PASSWORDS
 Execute command 
 ```
-./p store [user's name]
+./p create [user's name]
 ```
 
 1. Works same as storing passwords but this won't prompt for password by the user
