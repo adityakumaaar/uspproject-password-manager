@@ -1,10 +1,12 @@
 #!/bin/bash
 
-read -p 'Enter your name: ' nameOfPerson
-
-# echo $nameOfPerson
-
-FILE=/home/aditya/pass-man/$nameOfPerson
+if [ $# -eq 1 ]
+    then 
+        FILE=/home/aditya/pass-man/$1
+    else
+        read -p 'Enter your name: ' nameOfPerson
+        FILE=/home/aditya/pass-man/$nameOfPerson
+fi
 
 if [ -e "$FILE" ]; 
 then

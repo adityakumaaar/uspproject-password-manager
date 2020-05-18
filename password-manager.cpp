@@ -24,19 +24,52 @@ int main(int argc, char** argv){
         linebreak
         std::cout<<"This is the command to store the password"<<endl;
         linebreak
-
-        system("/home/aditya/Desktop/password-manager/store.sh");
-
+        if(argc == 2){
+            system("/home/aditya/Desktop/password-manager/store.sh");
+        }
+        else{
+        std::string path="/home/aditya/Desktop/password-manager/store.sh";
+        std::string para= argv[2];
+        std::string result = path + " " + para;
+        system(result.c_str());
+        }    
     }
     
     if(strcmp(argv[1],"recollect")==0){
 
         linebreak
         std::cout<<"This is the command to read the password"<<endl;
+        std::cout<<"To see all passwords stored enter all when prompted for Enter the wesite\n";
         linebreak
 
-        system("/home/aditya/Desktop/password-manager/recollect.sh");
+        if(argc == 2){
+            system("/home/aditya/Desktop/password-manager/recollect.sh");
+        }
+        else{
+        std::string path="/home/aditya/Desktop/password-manager/recollect.sh";
+        std::string para= argv[2];
+        std::string result = path + " " + para;
+        system(result.c_str());
+        }
 
     }
+
+    if(strcmp(argv[1],"create")==0){
+
+        linebreak
+        std::cout<<"This is the command to create password for existing users"<<endl;
+        linebreak
+
+        if(argc == 2){
+            system("/home/aditya/Desktop/password-manager/create.sh");
+        }
+        else{
+        std::string path="/home/aditya/Desktop/password-manager/create.sh";
+        std::string para= argv[2];
+        std::string result = path + " " + para;
+        system(result.c_str());
+        }
+    }
+
     
 }
